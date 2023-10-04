@@ -1,5 +1,8 @@
 import { Model, DataTypes, EnumDataType } from "sequelize";
 import { database } from "../database/db";
+import { Persona } from "./Persona";
+import { Posser } from "./Posser";
+import { Involucrar } from "./Involucrar";
 
 export class Vehiculo extends Model {
     public matriculaVehiculo!: string;
@@ -37,3 +40,7 @@ Vehiculo.init(
         timestamps: true
     }
 );
+Vehiculo.belongsToMany(Persona,{through: Posser})
+Persona.belongsToMany(Vehiculo,{through:Posser})
+Persona.belongsToMany(Vehiculo,{through: Involucrar})
+Vehiculo.belongsToMany(Persona,{through: Involucrar})

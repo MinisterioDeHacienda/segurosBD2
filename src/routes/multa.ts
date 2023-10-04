@@ -7,5 +7,9 @@ export class MultaRoutes {
 
     public routes(app: Application): void {
         app.route("/multas").get(this.multaController.getAllMulta)
+        app.route("/multas/:id").get(this.multaController.getOneMulta)
+        app.route("/multas").post(this.multaController.create)
+        app.route("/multas/:id").put(this.multaController.updateMulta);
+        app.route("/multas/:id").delete(this.multaController.deleteMulta);
     }
 }

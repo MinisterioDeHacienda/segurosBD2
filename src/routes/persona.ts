@@ -7,5 +7,9 @@ export class PersonaRoutes {
 
     public routes(app: Application): void {
         app.route("/personas").get(this.personaController.getAllPersona)
+        app.route("/personas/:id").get(this.personaController.getOnePersona)
+        app.route("/personas").post(this.personaController.create)
+        app.route("/personas/:id").put(this.personaController.updatePersona);
+        app.route("/personas/:id").delete(this.personaController.deletePersona);
     }
 }

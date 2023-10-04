@@ -6,6 +6,10 @@ export class VehiculoRoutes {
     public vehiculoController: VehiculoController =  new VehiculoController();
 
     public routes(app: Application): void {
-        app.route("/vehiculo").get(this.vehiculoController.getAllVehiculo)
+        app.route("/vehiculos").get(this.vehiculoController.getAllVehiculo)
+        app.route("/vehiculos/:id").get(this.vehiculoController.getOneVehiculo)
+        app.route("/vehiculos").post(this.vehiculoController.create)
+        app.route("/vehiculos/:id").put(this.vehiculoController.updateVehiculo);
+        app.route("/vehiculos/:id").delete(this.vehiculoController.deleteVehiculo);
     }
 }

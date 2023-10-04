@@ -1,6 +1,9 @@
 import { Model, DataTypes, EnumDataType } from "sequelize";
 import { database } from "../database/db";
 import { EnumType } from "typescript";
+import { Multa } from "./Multa";
+import { Vehiculo } from "./Vehiculo";
+import { Involucrar } from "./Involucrar";
 
 export class Persona extends Model {
     public DNI!: number;
@@ -67,3 +70,5 @@ Persona.init(
         timestamps: true
     }
 );
+Persona.hasMany(Multa)
+Multa.belongsTo(Persona)
