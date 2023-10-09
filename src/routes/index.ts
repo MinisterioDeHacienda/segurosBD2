@@ -1,3 +1,4 @@
+import { InvolucrarRoutes } from './involucar';
 import { MultaRoutes } from './multa';
 import { PersonaRoutes } from './persona';
 import { PosserRoutes } from './posser';
@@ -8,4 +9,5 @@ export class Routes {
     public multaRoutes: MultaRoutes = new MultaRoutes();
     public vehiculoRoutes: VehiculoRoutes = new VehiculoRoutes();
     public posserRoutes: PosserRoutes = new PosserRoutes();
+    public involucrarRoutes: InvolucrarRoutes = new InvolucrarRoutes();
 }

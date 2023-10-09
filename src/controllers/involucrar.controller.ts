@@ -10,8 +10,8 @@ export class InvolucrarController {
             const involucrar: InvolucrarI[] = await Involucrar.findAll()
             res.status(200).json({involucrar})
         } catch (error) {
-
-        }
+            console.error(error)
+        }   
     }
 
     public async getOneInvolucrar(req: Request, res: Response) {
@@ -20,7 +20,7 @@ export class InvolucrarController {
             involucrar = await Involucrar.findOne(
                 {
                     where: {
-                        id: req.params.id
+                        id: req.params.VehiculoId
                     }
                 }
 

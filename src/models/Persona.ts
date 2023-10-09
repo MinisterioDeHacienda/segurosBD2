@@ -6,49 +6,49 @@ import { Vehiculo } from "./Vehiculo";
 import { Involucrar } from "./Involucrar";
 
 export class Persona extends Model {
-    public DNI!: number;
-    public nombrePersona!: string;
-    public apellidoPersona!: string;
-    public direccionPersona!: string;
-    public ciudadPersona!: string;
+    public DNI!: string;
+    public nombre!: string;
+    public apellido!: string;
+    public direccion!: string;
+    public ciudad!: string;
     public tipoPersona!: EnumType;
-    public telefonoPersona!: string;
+    public telefono!: string;
 }
 
 export interface PersonaI {
-    DNI: number;
-    nombrePersona: string;
-    apellidoPersona: string;
-    direccionPersona: string;
-    ciudadPersona: string;
+    DNI: string;
+    nombre: string;
+    apellido: string;
+    direccion: string;
+    ciudad: string;
     tipoPersona: EnumType;
-    telefonoPersona: string;
+    telefono: string;
 }
 
 Persona.init(
     {
 
         DNI: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
         },
 
-        nombrePersona: {
+        nombre: {
             type: DataTypes.STRING,
             allowNull: false
         },
 
-        apellidoPersona: {
+        apellido: {
             type: DataTypes.STRING,
             allowNull: false
         },
 
-        direccionPersona: {
+        direccion: {
             type: DataTypes.STRING,
             allowNull: false
         },
 
-        ciudadPersona: {
+        ciudad: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -58,7 +58,7 @@ Persona.init(
             allowNull: false
         },
 
-        telefonoPersona: {
+        telefono: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -67,7 +67,7 @@ Persona.init(
     {
         tableName: "personas",
         sequelize: database,
-        timestamps: true
+        timestamps: false
     }
 );
 Persona.hasMany(Multa)

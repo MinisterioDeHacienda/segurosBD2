@@ -36,6 +36,6 @@ Multa.init(
     {
         tableName: "multas",
         sequelize: database,
-        timestamps: true
+        timestamps: false
     }
 );

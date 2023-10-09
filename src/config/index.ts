@@ -28,6 +28,8 @@ export class App {
         this.routePrv.personaRoutes.routes(this.app);
         this.routePrv.multaRoutes.routes(this.app);
         this.routePrv.vehiculoRoutes.routes(this.app);
+        this.routePrv.involucrarRoutes.routes(this.app);
+        this.routePrv.posserRoutes.routes(this.app);
     }
     
     

@@ -26,6 +26,6 @@ Involucrar.init(
     {
         tableName: "involucrar",
         sequelize: database,
-        timestamps: true
+        timestamps: false
     }
 );
