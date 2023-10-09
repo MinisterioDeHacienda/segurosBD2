@@ -5,31 +5,31 @@ import { Posser } from "./Posser";
 import { Involucrar } from "./Involucrar";
 
 export class Vehiculo extends Model {
-    public matriculaVehiculo!: string;
-    public marcaVehiculo!: string;
-    public modeloVehiculo!: string;
+    public matricula!: string;
+    public marca!: string;
+    public modelo!: string;
 }
 
 export interface VehiculoI {
-    matriculaVehiculo: string;
-    marcaVehiculo: string;
-    modeloVehiculo: string;
+    matricula: string;
+    marca: string;
+    modelo: string;
 }
 
 Vehiculo.init(
     {
 
-        matriculaVehiculo: {
+        matricula: {
             type: DataTypes.STRING,
             allowNull: false
         },
 
-        marcaVehiculo: {
+        marca: {
             type: DataTypes.STRING,
             allowNull: false
         },
 
-        modeloVehiculo: {
+        modelo: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -37,7 +37,7 @@ Vehiculo.init(
     {
         tableName: "vehiculos",
         sequelize: database,
-        timestamps: true
+        timestamps: false
     }
 );
 Vehiculo.belongsToMany(Persona,{through: Posser})

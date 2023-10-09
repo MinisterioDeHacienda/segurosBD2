@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
 
-const DB_NAME = 'seguros_mysql_nodejs';
+const DB_NAME = 'seguros_postgresql_nodejs';
 
-const DB_USER = 'root';
+const DB_USER = 'postgres';
 
 const DB_PASS = '12345678';
 
@@ -15,8 +15,8 @@ export const database = new Sequelize(
 
     {
         host: 'localhost',
-        dialect: 'mysql',
-        port: 3306
+        dialect: 'postgres',
+        port: 5432
     }
 
 );

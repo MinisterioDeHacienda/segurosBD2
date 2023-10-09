@@ -26,14 +26,10 @@ Posser.init(
             allowNull: false
         },
 
-        matricula: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
     },
     {
         tableName: "possers",
         sequelize: database,
-        timestamps: true
+        timestamps: false
     }
 );
